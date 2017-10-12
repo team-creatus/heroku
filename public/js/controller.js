@@ -13,8 +13,8 @@ speed.config(function($routeProvider) {
 
 /** socket.io 接続設定 */
 speed.factory('socket', ['$rootScope', function($rootScope) {
-      var socket = io.connect("http://speedgame-creatus.rhcloud.com:8000");
-      //var socket = io.connect("http://localhost:8080");
+      // var socket = io.connect("http://nodejs-creatus.rhcloud.com/");
+      var socket = io.connect("http://localhost:8080");
       return {
         on: function (eventName, callback) {
           socket.on(eventName, function() {
@@ -264,7 +264,7 @@ speed.controller('gameController', ['$scope','$routeParams','socket','$interval'
               speedDto = data;
 
               // 台札更新判定
-              if(!speedDto.checkGameResult){
+              if(speedDto.checkGameResult != null && !speedDto.checkGameResult){
             	  // ダイアログを表示
             	  $scope.countdown = "カードを置けません";
             	  $('.alert').modal('show');
@@ -382,12 +382,27 @@ speed.controller('testController', ['$location','$scope', 'socket', function($lo
         $scope.oppCard2 = getCard(1,speedDto.player1fieldCardList[1][0]);
         $scope.oppCard3 = getCard(1,speedDto.player1fieldCardList[2][0]);
         $scope.oppCard4 = getCard(1,speedDto.player1fieldCardList[3][0]);
-
         // 場札設定
         $scope.fieldCard1 = getCard(speedDto.daiFuda2[0], speedDto.daiFuda2[1]);
         $scope.fieldCard2 = getCard(speedDto.daiFuda1[0], speedDto.daiFuda1[1]);
       }
-
+      if((speedDto.player1Message == "あなたの勝ち") || (speedDto.player1Message == "あなたの負け")){
+	      if(userName == speedDto.player1Name) {
+	    	  if(speedDto.player1Message == "あなたの勝ち"){
+	    		  $('#winnerModal').modal("show");
+	    	  }else{
+	    		  $('#loserModal').modal("show");
+	    	  }
+	      }else{
+	    	  if(speedDto.player2Message == "あなたの勝ち"){
+	    		  $('#winnerModal').modal("show");
+	    	  }else{
+	    		  $('#loserModal').modal("show");
+	    	  }
+	      }
+      }else if((speedDto.player1Message == "引き分け")){
+    	  $('#drawModal').modal("show");
+      }
       // 勝敗判定
       if(speedDto.player1ResultCode == "2" || speedDto.player2ResultCode == "2"){
         var result = confirm($scope.message);
@@ -403,9 +418,9 @@ speed.controller('testController', ['$location','$scope', 'socket', function($lo
       }
 
       // メッセージエリアデフォルト値設定
-      if($scope.message == "") {
-        $scope.message = "メッセージエリア";
-      }
+//      if($scope.message == "") {
+//        $scope.message = "メッセージエリア";
+//      }
     }
 
     /*
