@@ -14,7 +14,7 @@ var App = function() {
 	 */
 	self.setupVariables = function() {
         self.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
-        self.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+        self.port      = process.env.PORT || 8080;
 
 		if (typeof self.ipaddress === "undefined") {
 			// IPアドレスが環境変数に未設定の場合、127.0.0.1とする
@@ -122,8 +122,8 @@ var App = function() {
 	self.start = function() {
 		//  IPアドレス、ポートを設定
 		var server =
-		self.app.listen(self.port, self.ipaddress, function() {
-			console.log('%s: Node server started on %s:%d ...', Date(Date.now() ), self.ipaddress, self.port);
+		self.app.listen(self.port, function() {
+			console.log('%s: Node server started on port:%d ...', Date(Date.now() ), self.port);
 		});
 
 		// socket.ioを設定
