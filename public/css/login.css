@@ -22,10 +22,12 @@ body, html, h1 {
 @media screen and (max-width: 479px) {
   html, body, h1, input {
     font-size: 0.9rem;
+    font-weight: 200;
   }
 
   #login {
     font-size: 0.8rem;
+    font-weight: 200;
   }
 }
 
