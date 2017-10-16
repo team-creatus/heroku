@@ -13,7 +13,8 @@ speed.config(function($routeProvider) {
 
 /** socket.io 接続設定 */
 speed.factory('socket', ['$rootScope', function($rootScope) {
-      var socket = io.connect("https://speed-game.herokuapp.com/");
+      // var socket = io.connect("http://nodejs-creatus.rhcloud.com/");
+      var socket = io.connect("http://localhost:8080");
       return {
         on: function (eventName, callback) {
           socket.on(eventName, function() {
@@ -235,7 +236,7 @@ speed.controller('gameController', ['$scope','$routeParams','socket','$interval'
             /* 内側にスナップ */
             snapMode: "inner",
             /* スナップする領域の範囲 値が大きいほど遠い位置からスナップする. */
-            snapTolerance: 40,
+            snapTolerance: 50,
             /* ドロップ可能領域ではない場合、元の位置に戻る */
             revert: true,
             /* 元の位置に戻る速度 ミリ秒 */
@@ -399,8 +400,6 @@ speed.controller('testController', ['$location','$scope', 'socket', function($lo
 	    		  $('#loserModal').modal("show");
 	    	  }
 	      }
-      }else if((speedDto.player1Message == "引き分け")){
-    	  $('#drawModal').modal("show");
       }
       // 勝敗判定
       if(speedDto.player1ResultCode == "2" || speedDto.player2ResultCode == "2"){
