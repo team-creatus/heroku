@@ -13,8 +13,7 @@ speed.config(function($routeProvider) {
 
 /** socket.io 接続設定 */
 speed.factory('socket', ['$rootScope', function($rootScope) {
-      // var socket = io.connect("http://nodejs-creatus.rhcloud.com/");
-      var socket = io.connect("http://localhost:8080");
+      var socket = io.connect("https://speed-game.herokuapp.com/");
       return {
         on: function (eventName, callback) {
           socket.on(eventName, function() {
