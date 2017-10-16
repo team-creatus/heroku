@@ -16,19 +16,19 @@ body, html, h1 {
   }
 
   #login {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 100;
   }
 }
 
 @media screen and (max-width: 479px) {
   html, body, h1, input {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 300;
   }
 
   #login {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 300;
   }
 }

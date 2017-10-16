@@ -99,14 +99,14 @@ html, input ,h1 {
     background-repeat: no-repeat;
     font-family: "Raleway" , "Noto Sans JP", "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
     font-weight: 300;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   html, input {
     font-family: "Raleway" , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
 
     font-weight: 300;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .opp, .card-field {
