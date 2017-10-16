@@ -12,22 +12,24 @@ body, html, h1 {
 @media screen and (max-width: 605px) {
   html, body, h1, input {
     font-size: 1.2rem;
+    font-weight: 100;
   }
 
   #login {
     font-size: 0.8rem;
+    font-weight: 100;
   }
 }
 
 @media screen and (max-width: 479px) {
   html, body, h1, input {
     font-size: 0.9rem;
-    font-weight: 200;
+    font-weight: 300;
   }
 
   #login {
     font-size: 0.8rem;
-    font-weight: 200;
+    font-weight: 300;
   }
 }
 
