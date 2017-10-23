@@ -80,14 +80,19 @@ html, input ,h1 {
 
 /* メッセージ */
 .alert {
+  background: #000;
+  border-radius: 10px;
+  opacity: 0.8;
+  border: none;
   display: none;
   z-index: 999;
-  width: 400px;
   position: relative;
   margin: 0 auto;
   text-align: center;
   top: -500px;
-  font-size: 2rem;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
   white-space: nowrap;
 }
 
@@ -98,15 +103,15 @@ html, input ,h1 {
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Raleway" , "Noto Sans JP", "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
-    font-weight: 300;
-    font-size: 0.9rem;
+    font-weight: 100;
+    font-size: 0.8rem;
   }
 
   html, input {
     font-family: "Raleway" , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
 
-    font-weight: 300;
-    font-size: 0.9rem;
+    font-weight: 100;
+    font-size: 0.8rem;
   }
 
   .opp, .card-field {
@@ -154,7 +159,7 @@ html, input ,h1 {
     margin: 0 auto;
     line-height: 100px;
     height: 100px;
-    width: 300px;
+    width: 200px;
   }
 
   .name-char {
@@ -168,13 +173,19 @@ html, input ,h1 {
 
   /* メッセージ */
   .alert {
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    opacity: 0.8;
+    border: none;
+    display: none;
     z-index: 999;
-    width: 200px;
     position: relative;
     margin: 0 auto;
     text-align: center;
-    top: -280px;
-    font-size: 1.5rem;
+    top: -350px;
+    font-size: 3rem;
+    font-weight: bold;
     white-space: nowrap;
   }
 }
