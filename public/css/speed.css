@@ -102,21 +102,16 @@ html, h1 {
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Raleway" , "Noto Sans JP", "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
-    font-weight: 100;
+    font-weight: bold;
     font-size: 0.8rem;
   }
 
   html {
     font-family: "Raleway" , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
 
-    font-weight: 100;
+    font-weight: bold;
     font-size: 0.8rem;
   }
-
-  input {
-    font-weight: bold !important;
-  }
-
 
   .opp, .card-field {
     line-height: 100px;
