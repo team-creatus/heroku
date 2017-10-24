@@ -10,20 +10,9 @@ body, html, h1 {
 }
 
 input {
+  height: 70px !important;
   font-size: 3rem !important;
   font-weight: 200 !important;
-}
-
-@media screen and (max-width: 605px) {
-  html, body, h1, input {
-    font-size: 1.2rem !important;
-    font-weight: bold !important;
-  }
-
-  #login {
-    font-size: 0.8rem;
-  }
-
 }
 
 @media screen and (max-width: 479px) {
