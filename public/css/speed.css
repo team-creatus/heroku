@@ -178,7 +178,7 @@ html, h1 {
   /* メッセージ */
   .alert {
     background: #000;
-    width: 100%;
+    width: 100% !important;
     color: #fff;
     border: none;
     display: none;
