@@ -114,7 +114,7 @@ exports.putMain = function(speedDto) {
 
   // カード更新判定フラグ
   speedDto.checkGameResult = true;
-  
+
   // 排他チェック
   if (!checkExclusion(speedDto)) {
     // チェックエラーの場合speedDtoを返却して処理終了
@@ -152,8 +152,8 @@ exports.putMain = function(speedDto) {
   // プレイヤ双方の台札設定可否
   while (!checkGame(speedDto)) {
     // プレイヤ双方がカードを台札に置くことができない場合
-	// カード更新判定フラグにfalseを設定
-	speedDto.checkGameResult = false;
+    // カード更新判定フラグにfalseを設定
+    speedDto.checkGameResult = false;
     if (!updateLeadCard(speedDto)) {
       // ゲーム続行不可能の場合、ゲーム終了のメッセージを送信する
       // 排他ロックを解除
@@ -494,7 +494,6 @@ function updateLeadCard(speedDto) {
       }
     }
   }
-
 
   // 両プレイヤーの場札がなくなった場合
   if (countCard(speedDto.player1fieldCardList) === 0
